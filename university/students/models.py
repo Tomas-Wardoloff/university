@@ -57,7 +57,11 @@ class Students(models.Model):
         choices=GenderChoices.choices,
         help_text="Select your gender",
     )
-    cellphone = PhoneNumberField(unique=True, help_text="Enter your phone number")
+    cellphone = PhoneNumberField(
+        unique=True, help_text="Enter your phone number")
+
+    class Meta:
+        db_table = "students"
 
     def __str__(self) -> str:
         return "({0}) {1}, {2}".format(self.id, self.last_name, self.first_name)

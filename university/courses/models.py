@@ -29,6 +29,7 @@ class Courses(models.Model):
     degree_id = models.ForeignKey(Degrees, on_delete=models.PROTECT)
 
     class Meta:
+        db_table = "courses"
         ordering = ['name']
 
     def __str__(self) -> str:

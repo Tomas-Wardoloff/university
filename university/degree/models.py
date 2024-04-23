@@ -29,6 +29,7 @@ class Degrees(models.Model):
         verbose_name='Total Credits to get', help_text='Insert degree total credits', validators=[MinValueValidator(1)])
 
     class Meta:
+        db_table = "degrees"
         ordering = ['id', 'name', 'degree_type']
 
     def __str__(self) -> str:

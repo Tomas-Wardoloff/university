@@ -40,6 +40,7 @@ class CourseEnrollment(models.Model):
                               verbose_name='Course Status', help_text='Select student status in the course')
 
     class Meta:
+        db_table = "course_enrollments"
         ordering = ['enrollment_date', 'course_id', 'student_id']
 
     def __str__(self) -> str:
@@ -75,6 +76,7 @@ class DegreeEnrollment(models.Model):
                                 help_text='Select the date where the student got the degree')
 
     class Meta:
+        db_table = "degree_enrollments"
         ordering = ['id', 'degree_id', 'student_id']
 
     def __str__(self) -> str:
