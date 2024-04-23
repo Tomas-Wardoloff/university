@@ -40,7 +40,7 @@ class CourseEnrollment(models.Model):
                               verbose_name='Course Status', help_text='Select student status in the course')
 
     class Meta:
-        ordering = ['enrollment_date', 'couse_id', 'student_id']
+        ordering = ['enrollment_date', 'course_id', 'student_id']
 
     def __str__(self) -> str:
         return "({0}) The student {1}, is enrolled in the course {2} and the status is {3}".format(self.id, self.student_id, self.course_id, self.status)
