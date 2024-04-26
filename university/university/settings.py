@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'students.apps.StudentsConfig',
     'degree.apps.DegreeConfig',
     'courses.apps.CoursesConfig',
-    'enrollments.apps.EnrollmentsConfig'
+    'enrollments.apps.EnrollmentsConfig',
+    'rest_framework'
     
 ]
 
